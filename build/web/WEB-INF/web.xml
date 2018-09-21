@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Quienes_somos</servlet-name>
+        <servlet-class>controladores.Quienes_somos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Donde_queda</servlet-name>
+        <servlet-class>controladores.Donde_queda</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Flora</servlet-name>
+        <servlet-class>controladores.Flora</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Contactenos</servlet-name>
+        <servlet-class>controladores.Contactenos</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Quienes_somos</servlet-name>
+        <url-pattern>/Quienes_somos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Donde_queda</servlet-name>
+        <url-pattern>/Donde_queda</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Contactenos</servlet-name>
+        <url-pattern>/Contactenos</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
