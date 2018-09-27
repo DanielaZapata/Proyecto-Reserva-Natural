@@ -130,6 +130,38 @@
         <h1>Contactenos</h1>
         
         
+        <%@page import="java.util.List" %>
+        <%@page import="modelos.Imagen" %>
+        <%
+            List<Imagen> imagenesAves = (List<Imagen>) request.getAttribute("imagenesAves");
+            List<Imagen> imagenesCorales = (List<Imagen>) request.getAttribute("imagenesCorales");
+            List<Imagen> imagenesCrustaceos = (List<Imagen>) request.getAttribute("imagenesCrustaceos");
+            List<Imagen> imagenesSerpientes = (List<Imagen>) request.getAttribute("imagenesSerpientes");
+            List<Imagen> imagenesMamiferos = (List<Imagen>) request.getAttribute("imagenesMamiferos");
+            List<Imagen> imagenesAnfibios = (List<Imagen>) request.getAttribute("imagenesAnfibios");
+        %>
+        
+        <div class="contenedor">
+            <%
+                Dato dato;
+                for (int i = 0; i < dato.size(); i++) {
+                dato = dato.get(i);%>
+                
+            <div class="elemento">
+                 <strong>
+                <div><%= dato.nombre%></div>
+                </strong>
+                <br>
+                <img src="<%=dato.telefono%>">
+                <br>
+                <div><%= dato.correo%></div>
+                <br>
+            </div>
+            <%
+            }%>
+        </div>
+        
+        
         
 
         <footer>

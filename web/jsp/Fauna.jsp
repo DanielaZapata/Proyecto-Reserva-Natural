@@ -164,7 +164,7 @@
                 <div><%= imagen.nombre%></div>
                 </strong>
                 <br>
-                <img src="<%= imagen.imagen%>">
+                <img src="<%= imagen.imagen%>" width="200px" height="150px">
                 <br>
                 <div><%= imagen.descripcion%></div>
                 <br>
@@ -186,7 +186,7 @@
                 <div><%= imagen.nombre%></div>
                 </strong>
                 <br>
-                <img src="<%= imagen.imagen%>">
+                <img src="<%= imagen.imagen%>" width="200px" height="150px">
                 <br>
                 <div><%= imagen.descripcion%></div>
                 <br>
@@ -208,7 +208,7 @@
                 <div><%= imagen.nombre%></div>
                 </strong>
                 <br>
-                <img src="<%= imagen.imagen%>">
+                <img src="<%= imagen.imagen%>" width="200px" height="150px">
                 <br>
                 <div><%= imagen.descripcion%></div>
                 <br>
@@ -230,7 +230,7 @@
                 <div><%= imagen.nombre%></div>
                 </strong>
                 <br>
-                <img src="<%= imagen.imagen%>">
+                <img src="<%= imagen.imagen%>" width="200px" height="150px">
                 <br>
                 <div><%= imagen.descripcion%></div>
                 <br>
@@ -252,7 +252,7 @@
                 <div><%= imagen.nombre%></div>
                 </strong>
                 <br>
-                <img src="<%= imagen.imagen%>">
+                <img src="<%= imagen.imagen%>" width="200px" height="150px">
                 <br>
                 <div><%= imagen.descripcion%></div>
                 <br>
@@ -274,7 +274,7 @@
                 <div><%= imagen.nombre%></div>
                 </strong>
                 <br>
-                <img src="<%= imagen.imagen%>">
+                <img src="<%= imagen.imagen%>" width="200px" height="150px">
                 <br>
                 <div><%= imagen.descripcion%></div>
                 <br>

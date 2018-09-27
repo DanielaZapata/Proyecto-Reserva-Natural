@@ -33,7 +33,33 @@ public class Contactenos extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         RequestDispatcher rd = request.getRequestDispatcher("jsp/Contactenos.jsp");
         rd.forward(request, response);
-    }    
+    } 
+      
+       List<Dato> dato() {
+        List<Dato> listaDato = new ArrayList<Dato>();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("SELECT * FROM contactenos");
+            ResultSet resultados = ps.executeQuery();
+            while(resultados.next()) {
+                String nombre = resultados.getString("Nombre");
+                String telefono = resultados.getString("Telefono");
+                String correo = resultados.getString("Correo");
+                Dato i = new Dato();
+                i.nombre = nombre;
+                i.imagen = telefono;
+                i.descripcion = correo;
+                listaDato.add(i);
+            }
+            conexion.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Contactenos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Contactenos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listaDato;
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
