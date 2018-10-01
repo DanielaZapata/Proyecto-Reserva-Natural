@@ -24,6 +24,10 @@
         <servlet-name>Flora</servlet-name>
         <servlet-class>controladores.Flora</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Nueva_fauna</servlet-name>
+        <servlet-class>controladores.Nueva_fauna</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Quienes_somos</servlet-name>
         <url-pattern>/Quienes_somos</url-pattern>
@@ -43,6 +47,10 @@
     <servlet-mapping>
         <servlet-name>Flora</servlet-name>
         <url-pattern>/Flora</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Nueva_fauna</servlet-name>
+        <url-pattern>/Nueva_fauna</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
