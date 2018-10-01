@@ -1,3 +1,4 @@
+<%@page import="modelos.Dato"%>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -112,17 +113,16 @@
         <header>
             <div class="logo">
                 <img src="imagenes/img7.png" width="1500" alt="40">
-                <a href="#">Reserva Natural Ensena de UtrÃ­a</a>
+                <a href="#">Reserva Natural Ensena de Utría</a>
             </div>
 
              <nav>
                 <a href="Inicio">Inicio</a>
                 <a href="fauna">Fauna</a>
                 <a href="Flora">Flora</a>
-                <a href="Quienes_somos">Â¿QuiÃ©nes somos?</a>
-                <a href="Formulario_turistico">Reserva TurÃ­stica</a>
-                <a href="Formulario_reserva_investigacion">Reserva InvestigaciÃ³n</a>
-                <a href="#">Contactenos</a>
+                <a href="Quienes_somos">¿Quiénes somos?</a>
+                <a href="Formulario_turistico">Reserva Turística</a>
+                <a href="Formulario_reserva_investigacion">Reserva Investigación</a>
             </nav>
             
         </header>
@@ -131,21 +131,14 @@
         
         
         <%@page import="java.util.List" %>
-        <%@page import="modelos.Imagen" %>
-        <%
-            List<Imagen> imagenesAves = (List<Imagen>) request.getAttribute("imagenesAves");
-            List<Imagen> imagenesCorales = (List<Imagen>) request.getAttribute("imagenesCorales");
-            List<Imagen> imagenesCrustaceos = (List<Imagen>) request.getAttribute("imagenesCrustaceos");
-            List<Imagen> imagenesSerpientes = (List<Imagen>) request.getAttribute("imagenesSerpientes");
-            List<Imagen> imagenesMamiferos = (List<Imagen>) request.getAttribute("imagenesMamiferos");
-            List<Imagen> imagenesAnfibios = (List<Imagen>) request.getAttribute("imagenesAnfibios");
-        %>
+        <%@page import="modelos.Dato" %>
+       
         
         <div class="contenedor">
             <%
                 Dato dato;
-                for (int i = 0; i < dato.size(); i++) {
-                dato = dato.get(i);%>
+                for (int i = 0; i < Dato.size(); i++) {
+                dato = Dato.get(i);%>
                 
             <div class="elemento">
                  <strong>
@@ -168,12 +161,11 @@
             <section class="links">
                 <a href="Donde_queda">Â¿DÃ³nde queda?</a>
                 <a href="Comentarios">Comentarios</a>
+                <a href="#">Contáctenos</a>
             </section>
             <div class="rs">
                 <img src="imagenes/facebook.jpg" width="50" alt="50">
                 <img src="imagenes/instagram.jpg" width="50" alt="50">
-                <img src="imagenes/twitter.jpg" width="50" alt="50">
-                <img src="imagenes/youtube.jpg" width="50" alt="50">
             </div>
              
          </footer>

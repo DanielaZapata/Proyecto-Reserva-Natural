@@ -20,6 +20,10 @@
         <servlet-name>Dato</servlet-name>
         <servlet-class>modelos.Dato</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Flora</servlet-name>
+        <servlet-class>controladores.Flora</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Quienes_somos</servlet-name>
         <url-pattern>/Quienes_somos</url-pattern>
@@ -35,6 +39,10 @@
     <servlet-mapping>
         <servlet-name>Dato</servlet-name>
         <url-pattern>/Dato</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Flora</servlet-name>
+        <url-pattern>/Flora</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

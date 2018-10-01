@@ -1,7 +1,7 @@
 <%-- 
-    Document   : Fauna
-    Created on : 15/08/2018, 08:43:46 AM
-    Author     : Usuario
+    Document   : Flora
+    Created on : 29/09/2018, 12:50:19 AM
+    Author     : User
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -139,7 +139,7 @@
     </center>
 
     <div class="contenedor">
-       
+        
         <%@page import="java.util.List" %>
         <%@page import="modelos.Imagen" %>
         <%
@@ -157,7 +157,7 @@
                 <div><%= imagen.nombre%></div>
                 </strong>
                 <br>
-                <img src="<%= imagen.imagen%>">
+                <img src="<%= imagen.imagen%>" width="200px" height="100px">
                 <br>
                 <div><%= imagen.descripcion%></div>
                 <br>
@@ -184,4 +184,5 @@
          </footer>
 </body>
 </html>
+
 

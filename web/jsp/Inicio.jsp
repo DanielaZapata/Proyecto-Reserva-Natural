@@ -228,7 +228,6 @@
             <a href="Quienes_somos">¿Quiénes somos?</a>
             <a href="Formulario_turistico">Reserva Turística</a>
             <a href="Formulario_reserva_investigacion">Reserva Investigación</a>
-            <a href="Contactenos">Contáctenos</a>
         </nav>
         
     </header>
@@ -293,15 +292,12 @@
         <section class="links">
             <a href="Donde_queda">¿Dónde queda?</a>
             <a href="Comentarios">Comentarios</a>
-            
-            
+            <a href="Contactenos">Contáctenos</a>
         </section>
 
         <div class="rs">
             <img src="imagenes/facebook.jpg" width="50" alt="50">
             <img src="imagenes/instagram.jpg" width="50" alt="50">
-            <img src="imagenes/twitter.jpg" width="50" alt="50">
-            <img src="imagenes/youtube.jpg" width="50" alt="50">
           </div>
     </footer>
 </div>
