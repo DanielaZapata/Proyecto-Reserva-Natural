@@ -194,30 +194,7 @@
                   </form>
             <br>
             <br>
-            
-            
-            <%@page import="java.util.List" %>
-    <%@page import="modelos.Contacto" %>
-       
-        
-        <div class="contenedor">
-            <%
-                List<Contacto> listaContactos = (List<Contacto>)request.getAttribute("comentario");
-                Contacto c;
-                for (int i = 0; i < listaContactos.size(); i++) {
-                c = listaContactos.get(i);%>
-                
-            <div class="elemento">
-                
-                <div><%= c.nombre%></div>
-             
-                <div><%= c.opinion%></div>
-                <br>
-            </div>
-            <%
-            }%>
-        </div>
-            
+         
             
         </div>
       </div>
