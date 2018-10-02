@@ -9,7 +9,7 @@ package modelos;
  *
  * @author Usuario
  */
-public class Dato {
+public class Contacto {
     public String nombre;
     public String telefono;
     public String correo;

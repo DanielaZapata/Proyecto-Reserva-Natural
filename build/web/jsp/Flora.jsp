@@ -177,8 +177,6 @@
             <div class="rs">
                 <img src="imagenes/facebook.jpg" width="50" alt="50">
                 <img src="imagenes/instagram.jpg" width="50" alt="50">
-                <img src="imagenes/twitter.jpg" width="50" alt="50">
-                <img src="imagenes/youtube.jpg" width="50" alt="50">
             </div>
              
          </footer>

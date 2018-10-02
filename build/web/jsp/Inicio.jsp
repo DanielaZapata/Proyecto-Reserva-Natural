@@ -31,8 +31,8 @@
             margin:auto;
 
             /* Flexbox */
-            display:flex;
-            flex-flow:row wrap;
+/*            display:flex;
+            flex-flow:row wrap;*/
         }
 
         body {
@@ -128,8 +128,12 @@
 
         aside .widget {
             background: #0850d4;
-            height:150px;
+/*            height:150px;*/
             margin:10px;
+        }
+        
+        .main > img {
+            max-width: 100%;
         }
 
         footer {
@@ -211,6 +215,24 @@
             }
         }
         
+        .widget {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .widget > .imagen {
+            width: 250px;
+        }
+        
+        .widget > .imagen > img {
+            min-width: 100%;
+            height: 160px;
+        }
+        .contenedor{
+            background-color: white;
+        }
+
+        
     </style>
 
 
@@ -234,7 +256,7 @@
 
     <section class="main">
 
-            <img src="imagenes/img5.jpg" width="1500" alt="40">
+            <img src="imagenes/img5.jpg" alt="40">
             
             <article>
             <h2 class="titulo">Misión.</h2>
@@ -268,20 +290,59 @@
                     <li type="disc">Se prohíbe el uso de aerosoles y productos que se consideren contaminantes como champú y jabones no biodegradables.</li>
                     <li type="disc">Se prohíbe hacer cualquier tipo de fogatas.</li>
                     <li type="disc">Está prohibida la actividad de pesca para los turistas dentro del área protegida</li>
-                    
-                    
                 </ul>        
-                </article> 
+                </article>
+        
+        
+         <%@page import="java.util.List" %>
+    <%@page import="modelos.Contacto" %>
+       
+        <h2 class="titulo">Contáctanos</h2>
+    
+        <div class="contenedor">
+            <%
+                List<Contacto> listaContactos = (List<Contacto>)request.getAttribute("contactenos");
+                Contacto c;
+                for (int i = 0; i < listaContactos.size(); i++) {
+                c = listaContactos.get(i);%>
+                
+            <div class="elemento">
+                
+                <div><%= c.nombre%></div>
+                
+                <div><%= c.telefono%></div>
+               
+                <div><%= c.correo%></div>
+                <br>
+               
+            </div>
+            <%
+            }%>
+        </div>
+        
+        
     </section>
 
+   
+    
+    
     <aside>
             <div class="widget">
-                <div class="imagen"></div>
-                <img src="imagenes/img1.jpg" width="250" height="160">
-                <img src="imagenes/img2.jpg" width="250" height="160">
-                <img src="imagenes/img3.jpg" width="250" height="160">
-                <img src="imagenes/img4.jpg" width="250" height="160">
-                <img src="imagenes/img6.jpg" width="270" height="160">
+                <div class="imagen">
+                    <img src="imagenes/img1.jpg" >
+                </div>
+                <div class="imagen">
+                    <img src="imagenes/img2.jpg" >
+                </div>
+                <div class="imagen">
+                    <img src="imagenes/img3.jpg" >
+                </div>
+                <div class="imagen">
+                    <img src="imagenes/img4.jpg" >
+                </div>
+                <div class="imagen">
+                    <img src="imagenes/img6.jpg" width="270" height="160">
+                </div>
             </div>
     
             
@@ -292,7 +353,6 @@
         <section class="links">
             <a href="Donde_queda">¿Dónde queda?</a>
             <a href="Comentarios">Comentarios</a>
-            <a href="Contactenos">Contáctenos</a>
         </section>
 
         <div class="rs">

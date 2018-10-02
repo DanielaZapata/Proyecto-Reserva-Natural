@@ -17,14 +17,6 @@
         <servlet-class>controladores.Contactenos</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Dato</servlet-name>
-        <servlet-class>modelos.Dato</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>Flora</servlet-name>
-        <servlet-class>controladores.Flora</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Nueva_fauna</servlet-name>
         <servlet-class>controladores.Nueva_fauna</servlet-class>
     </servlet>
@@ -39,10 +31,6 @@
     <servlet-mapping>
         <servlet-name>Contactenos</servlet-name>
         <url-pattern>/Contactenos</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Dato</servlet-name>
-        <url-pattern>/Dato</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Flora</servlet-name>

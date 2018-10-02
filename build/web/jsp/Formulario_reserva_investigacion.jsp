@@ -195,7 +195,6 @@
                 <section class="links">
                     <a href="Donde_queda">¿Dónde queda?</a>
                     <a href="Comentarios">Comentarios</a>
-                    <a href="Contactenos">Contáctenos</a>
                 </section>
         
                 </section>

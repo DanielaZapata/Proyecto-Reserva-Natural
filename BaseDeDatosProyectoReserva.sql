@@ -161,3 +161,21 @@ CREATE TABLE `reservanatural`.`contactenos` (
   INSERT INTO `reservanatural`.`contactenos` (`idcontactenos`, `Nombre`, `Telefono`, `Correo`) VALUES ('2', 'Gloria Zapata', '12315232', 'gloria2352@gmal.com');
   INSERT INTO `reservanatural`.`contactenos` (`idcontactenos`, `Nombre`, `Telefono`, `Correo`) VALUES ('3', 'Reserva De Utria', '5808266', 'reservanaturaldeutria1@gmail.com');
 
+
+
+CREATE TABLE `reservanatural`.`comentarios` (
+  `idcomentarios` INT NOT NULL AUTO_INCREMENT,
+  `Nombres` VARCHAR(200) NOT NULL,
+  `Apellidos` VARCHAR(200) NOT NULL,
+  `Correo` VARCHAR(200) NOT NULL,
+  `Pais` VARCHAR(200) NOT NULL,
+  `Ciudad` VARCHAR(200) NOT NULL,
+  `Barrio` VARCHAR(200) NOT NULL,
+  `Telefono` INT NOT NULL,
+  `Celular` INT NOT NULL,
+  `Opinion` VARCHAR(0) NOT NULL,
+  PRIMARY KEY (`idcomentarios`));
+
+INSERT INTO `reservanatural`.`comentarios` (`idcomentarios`, `Nombres`, `Apellidos`, `Correo`, `Pais`, `Ciudad`, `Barrio`, `Telefono`, `Celular`, `Opinion`) VALUES ('1', 'Carla', 'Manrique', 'carlam987@gmail.com', 'México', 'Guadalajara', '...', '6544567', '3458970954', 'gdccxvfuijgbjbjbgjbgjuvfui vhnuyb mgvyhnv yhnvgb ');
+
+
