@@ -4,13 +4,9 @@
  */
 package modelos;
 
-/**
- *
- * @author Usuario
- */
-public class Imagen {
+public class Animales {
+   
+     public int id;
     public String nombre;
-    public String imagen;
-    public String descripcion;
-    public int idave;
+
 }

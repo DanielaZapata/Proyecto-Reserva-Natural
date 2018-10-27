@@ -110,6 +110,21 @@
                     display: inline-block;
                 }
                 
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                td, th {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 8px;
+                }
+
+                tr {
+                    background-color: #dddddd;
+                }
                
 
         </style>
@@ -141,7 +156,7 @@
     <div class="contenedor">
         <h2>Aves</h2>
         <hr>
-
+        
         <%@page import="java.util.List" %>
         <%@page import="modelos.Imagen" %>
         <%
@@ -153,26 +168,33 @@
             List<Imagen> imagenesAnfibios = (List<Imagen>) request.getAttribute("imagenesAnfibios");
         %>
         
+        <br>
         <div class="contenedor">
             <%
                 Imagen imagen;
                 for (int i = 0; i < imagenesAves.size(); i++) {
                 imagen = imagenesAves.get(i);%>
-                
-            <div class="elemento">
-                 <strong>
-                <div><%= imagen.nombre%></div>
-                </strong>
-                <br>
-                <img src="<%= imagen.imagen%>" width="200px" height="150px">
-                <br>
-                <div><%= imagen.descripcion%></div>
-                <br>
-            </div>
+             
+            <table>
+                <div class="elemento">
+                    <tr>
+                    <strong>
+                    <th><div><%= imagen.nombre%></div></th>
+                    </strong>
+                    <br>
+                    <br>
+                    <td><img src="<%= imagen.imagen%>" width="200px" height="150px"></td>
+                    <br>
+                    <td><div><%= imagen.descripcion%></div></td>
+                    <br>
+                    </tr>
+                </div>
+            </table>
             <%
             }%>
         </div>
         
+        <br>
         <h2>Corales</h2>
         <hr>
         
@@ -181,20 +203,26 @@
                 for (int i = 0; i < imagenesCorales.size(); i++) {
                 imagen = imagenesCorales.get(i);%>
 
-             <div class="elemento">
-                 <strong>
-                <div><%= imagen.nombre%></div>
-                </strong>
-                <br>
-                <img src="<%= imagen.imagen%>" width="200px" height="150px">
-                <br>
-                <div><%= imagen.descripcion%></div>
-                <br>
-            </div>
+             <table>
+                <div class="elemento">
+                    <tr>
+                    <strong>
+                    <th><div><%= imagen.nombre%></div></th>
+                    </strong>
+                    <br>
+                    <br>
+                    <td><img src="<%= imagen.imagen%>" width="200px" height="150px"></td>
+                    <br>
+                    <td><div><%= imagen.descripcion%></div></td>
+                    <br>
+                    </tr>
+                </div>
+            </table>
             <%
             }%>
         </div>
-        
+                    
+        <br>            
         <h2>Mamiferos</h2>
         <hr>
         
@@ -203,20 +231,26 @@
                 for (int i = 0; i < imagenesMamiferos.size(); i++) {
                 imagen = imagenesMamiferos.get(i);%>
 
-             <div class="elemento">
-                 <strong>
-                <div><%= imagen.nombre%></div>
-                </strong>
-                <br>
-                <img src="<%= imagen.imagen%>" width="200px" height="150px">
-                <br>
-                <div><%= imagen.descripcion%></div>
-                <br>
-            </div>
+             <table>
+                <div class="elemento">
+                    <tr>
+                    <strong>
+                    <th><div><%= imagen.nombre%></div></th>
+                    </strong>
+                    <br>
+                    <br>
+                    <td><img src="<%= imagen.imagen%>" width="200px" height="150px"></td>
+                    <br>
+                    <td><div><%= imagen.descripcion%></div></td>
+                    <br>
+                    </tr>
+                </div>
+            </table>
             <%
             }%>
         </div>
         
+        <br>
          <h2>Crustáceos</h2>
         <hr>
         
@@ -225,20 +259,25 @@
                 for (int i = 0; i < imagenesCrustaceos.size(); i++) {
                 imagen = imagenesCrustaceos.get(i);%>
 
-            <div class="elemento">
-                 <strong>
-                <div><%= imagen.nombre%></div>
-                </strong>
-                <br>
-                <img src="<%= imagen.imagen%>" width="200px" height="150px">
-                <br>
-                <div><%= imagen.descripcion%></div>
-                <br>
-            </div>
+          <table>
+                <div class="elemento">
+                    <tr>
+                    <strong>
+                    <th><div><%= imagen.nombre%></div></th>
+                    </strong>
+                    <br>
+                    <br>
+                    <td><img src="<%= imagen.imagen%>" width="200px" height="150px"></td>
+                    <br>
+                    <td><div><%= imagen.descripcion%></div></td>
+                    <br>
+                    </tr>
+                </div>
+            </table>
             <%
             }%>
         </div>
-        
+         <br>
          <h2>Serpientes</h2>
         <hr>
         
@@ -247,20 +286,25 @@
                 for (int i = 0; i < imagenesSerpientes.size(); i++) {
                 imagen = imagenesSerpientes.get(i);%>
 
-             <div class="elemento">
-                 <strong>
-                <div><%= imagen.nombre%></div>
-                </strong>
-                <br>
-                <img src="<%= imagen.imagen%>" width="200px" height="150px">
-                <br>
-                <div><%= imagen.descripcion%></div>
-                <br>
-            </div>
+             <table>
+                <div class="elemento">
+                    <tr>
+                    <strong>
+                    <th><div><%= imagen.nombre%></div></th>
+                    </strong>
+                    <br>
+                    <br>
+                    <td><img src="<%= imagen.imagen%>" width="200px" height="150px"></td>
+                    <br>
+                    <td><div><%= imagen.descripcion%></div></td>
+                    <br>
+                    </tr>
+                </div>
+            </table>
             <%
             }%>
         </div>
-        
+        <br>
          <h2>Anfibios</h2>
         <hr>
         
@@ -269,26 +313,33 @@
                 for (int i = 0; i < imagenesAnfibios.size(); i++) {
                 imagen = imagenesAnfibios.get(i);%>
 
-             <div class="elemento">
-                 <strong>
-                <div><%= imagen.nombre%></div>
-                </strong>
-                <br>
-                <img src="<%= imagen.imagen%>" width="200px" height="150px">
-                <br>
-                <div><%= imagen.descripcion%></div>
-                <br>
-            </div>
+            <table>
+                <div class="elemento">
+                    <tr>
+                    <strong>
+                    <th><div><%= imagen.nombre%></div></th>
+                    </strong>
+                    <br>
+                    <br>
+                    <td><img src="<%= imagen.imagen%>" width="200px" height="150px"></td>
+                    <br>
+                    <td><div><%= imagen.descripcion%></div></td>
+                    <br>
+                    </tr>
+                </div>
+            </table>
             <%
             }%>
         </div>
-        
+        <br>
+        <br>
     </div>
          <footer>
              
             <section class="links">
                 <a href="Donde_queda">¿Dónde queda?</a>
                 <a href="Comentarios">Comentarios</a>
+                <a href="Nueva_fauna">Nueva Fauna</a>
             </section>
             <div class="rs">
                 <img src="imagenes/facebook.jpg" width="50" alt="50">

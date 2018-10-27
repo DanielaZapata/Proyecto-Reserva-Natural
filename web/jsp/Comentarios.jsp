@@ -138,44 +138,44 @@
             <br>
             <h2>Comentarios</h2>
             <p>Las opiniones son, sin duda, una herramienta que promueve el mejoramiento continuo en Nuestra Reserva por ello, lo invitamos a que opines acerca de esta grandiosa reserva, diligenciando esta breve información.</p>
-            <form>
+            <form action="Comentarios" method="post">
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="inputEmail4">Nombre:</label>
-                        <input type="nombre" class="form-control" id="inputEmail4" placeholder="nombre">
+                        <input type="nombre" class="form-control" id="inputEmail4"name="nombre" placeholder="nombre">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputPassword4">Apellido:</label>
-                        <input type="apellido" class="form-control" id="inputPassword4" placeholder="apellido">
+                        <input type="apellido" class="form-control" id="inputPassword4" name="apellidos" placeholder="apellido">
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputAddress">Correo Electrónico:</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="Email">
+                      <input type="text" class="form-control" id="inputAddress" name="email" placeholder="Email">
                     </div>
                     <div class="form-group">
                       <label for="inputAddress2">País:</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                      <input type="text" class="form-control" id="inputAddress2" name="pais" placeholder="Apartment, studio, or floor">
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="inputCity">Ciudad:</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" class="form-control" name="ciudad"id="inputCity">
                       </div>
                      
                       <div class="form-group col-md-2">
                         <label for="inputZip">Barrio:</label>
-                        <input type="text" class="form-control" id="inputZip">
+                        <input type="text" class="form-control" id="inputZip" name="barrio">
                       </div>
 
                       <div class="form-group col-md-2">
                             <label for="inputZip">Teléfono:</label>
-                            <input type="number" class="form-control" id="inputZip">
+                            <input type="number" class="form-control" name="telefono" id="inputZip">
                       </div>
 
                       <div class="form-group col-md-2">
                             <label for="inputZip">Celular:</label>
-                            <input type="number" class="form-control" id="inputZip">
+                            <input type="number" class="form-control" name="celular" id="inputZip">
                         </div>
                     
                         Opinión:
@@ -184,7 +184,7 @@
                     </div>
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <input class="form-check-input" type="checkbox" name="aceptar_requisitos" id="gridCheck">
                         <label class="form-check-label" for="gridCheck">
                           Acepto todos los requisitos
                         </label>

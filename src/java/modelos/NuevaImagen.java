@@ -4,13 +4,10 @@
  */
 package modelos;
 
-/**
- *
- * @author Usuario
- */
-public class Imagen {
-    public String nombre;
-    public String imagen;
-    public String descripcion;
+public class NuevaImagen {
+    
     public int idave;
+    public String nombre;
+    public String descripcion;
+    public String imagen;
 }
