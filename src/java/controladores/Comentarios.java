@@ -88,9 +88,9 @@ public class Comentarios extends HttpServlet {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `ejemplo`.`imagenes` (`nombre`, `apellido`, tipo) VALUES (?, ?, ?)");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `ejemplo`.`imagenes` (`nombre`, `apellidos`, tipo) VALUES (?, ?, ?)");
             ps.setString(1, nombre);
-            ps.setString(2, apelldios);
+            ps.setString(2, apellidos);
             ps.setInt(3, tipo);
             ps.execute();
         } catch (ClassNotFoundException ex) {
