@@ -20,6 +20,18 @@
         <servlet-name>Nueva_fauna</servlet-name>
         <servlet-class>controladores.Nueva_fauna</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Nueva_flora</servlet-name>
+        <servlet-class>controladores.Nueva_flora</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Plantas</servlet-name>
+        <servlet-class>modelos.Plantas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Comentario</servlet-name>
+        <servlet-class>modelos.Comentario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Quienes_somos</servlet-name>
         <url-pattern>/Quienes_somos</url-pattern>
@@ -39,6 +51,18 @@
     <servlet-mapping>
         <servlet-name>Nueva_fauna</servlet-name>
         <url-pattern>/Nueva_fauna</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Nueva_flora</servlet-name>
+        <url-pattern>/Nueva_flora</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Plantas</servlet-name>
+        <url-pattern>/Plantas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Comentario</servlet-name>
+        <url-pattern>/Comentario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

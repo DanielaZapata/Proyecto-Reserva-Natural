@@ -110,6 +110,22 @@
                     display: inline-block;
                 }
                 
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                td, th {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 8px;
+                }
+
+                tr {
+                    background-color: #dddddd;
+                }
+                
                
 
         </style>
@@ -152,16 +168,21 @@
                 for (int i = 0; i < imagenesPlantas.size(); i++) {
                 imagen = imagenesPlantas.get(i);%>
                 
-            <div class="elemento">
-                <strong>
-                <div><%= imagen.nombre%></div>
-                </strong>
-                <br>
-                <img src="<%= imagen.imagen%>" width="200px" height="100px">
-                <br>
-                <div><%= imagen.descripcion%></div>
-                <br>
-            </div>
+            <table>
+                <div class="elemento">
+                    <tr>
+                    <strong>
+                    <th><div><%= imagen.nombre%></div></th>
+                    </strong>
+                    <br>
+                    <br>
+                    <td><img src="<%= imagen.imagen%>" width="200px" height="150px"></td>
+                    <br>
+                    <td><div><%= imagen.descripcion%></div></td>
+                    <br>
+                    </tr>
+                </div>
+            </table>
             <%
             }%>
         </div>
@@ -173,10 +194,12 @@
             <section class="links">
                 <a href="Donde_queda">¿Dónde queda?</a>
                 <a href="Comentarios">Comentarios</a>
+                <a href="Nueva_flora">Nueva flora</a>
             </section>
             <div class="rs">
-                <img src="imagenes/facebook.jpg" width="50" alt="50">
-                <img src="imagenes/instagram.jpg" width="50" alt="50">
+                 <a href="https://www.facebook.com/dani.pachon.509"><img src="imagenes/facebook.jpg" width="50" alt="50"></a>
+                 <a href="https://www.instagram.com/ensenadadeutria/?hl=es-la"><img src="imagenes/instagram.jpg" width="50" alt="50"></a>
+
             </div>
              
          </footer>

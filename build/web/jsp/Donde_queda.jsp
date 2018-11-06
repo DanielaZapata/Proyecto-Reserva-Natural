@@ -11,7 +11,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <link rel="shortcut icon" href="img/img7.png" />
+        <link rel="shortcut icon" href="imagenes/img7.png" />
         <title>¿Dónde queda?</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" 
         integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
@@ -148,6 +148,9 @@
             <div class="container">
                         <div class="main">
                             <div class="thanks">
+                                
+                                
+                                <br>
                                 <h3>Ruta aérea:</h3>
                                 <p>
                                         Por Bahía Solano o Nuquí en avión desde Bogotá o Cali (con tránsito en Medellín).
@@ -162,6 +165,14 @@
                                 <p>
                                         Desde Bahía Solano al corregimiento de El Valle en colectivo, y de allí a pie hasta el parque, por un sendero de selva tropical húmeda.
                                 </p>
+                                
+                                
+                                
+                             <center>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1970243130686!2d-77.42997168597684!3d6.104150329591378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4930897a95b54d%3A0x1f9bb3ef47e85506!2sEnsenada+de+Utr%C3%ADa!5e0!3m2!1ses-419!2sco!4v1538408257986" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </center>
+                                
+                                
                                 <article>
                                                 <br>
                                                 <br>
@@ -174,8 +185,6 @@
                           
                             </div>
                             
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1970243130686!2d-77.42997168597684!3d6.104150329591378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4930897a95b54d%3A0x1f9bb3ef47e85506!2sEnsenada+de+Utr%C3%ADa!5e0!3m2!1ses-419!2sco!4v1538408257986" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                          
                         </div>
                     </div>
                     <br>
@@ -188,12 +197,13 @@
                         
                                 </section>
                                 <div class="rs">
-                                    <img src="imagenes/facebook.jpg" width="50" alt="50">
-                                    <img src="imagenes/instagram.jpg" width="50" alt="50">
+                                    <a href="https://www.facebook.com/dani.pachon.509"><img src="imagenes/facebook.jpg" width="50" alt="50"></a>
+                                    <a href="https://www.instagram.com/ensenadadeutria/?hl=es-la"><img src="imagenes/instagram.jpg" width="50" alt="50"></a>
+
+                                    
                                   </div>
                                 </section>
                             </footer>
                         
                     </body>
                 </html>
-

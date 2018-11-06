@@ -1,7 +1,7 @@
 CREATE DATABASE RESERVANATURAL;
 
 CREATE TABLE `reservanatural`.`animal` (
-  `idave` INT NOT NULL AUTO_INCREMENT,
+  `idave` INT NOT NULL AUTO_INCanimalREMENT,
   `Nombre` VARCHAR(45) NULL,
   `Imagen` VARCHAR(200) NULL,
   `Descripcion` VARCHAR(300) NULL,
@@ -150,6 +150,12 @@ INSERT INTO `reservanatural`.`flora` (`idflora`, `Nombre`, `Imagen`, `Descripcio
 INSERT INTO `reservanatural`.`flora` (`idflora`, `Nombre`, `Imagen`, `Descripcion`) VALUES ('22', 'Palma de asaí', 'imagenes/Flora/palma_asaí.jpg', 'es una palmera nativa del norte de Sudamérica, apreciada por las propiedades nutritivas de su fruto. También se conoce con el nombre de palma manaca.');
 
 
+UPDATE `reservanatural`.`flora` SET `Imagen` = 'imagenes/Flora/mangle.png' WHERE (`idflora` = '13');
+UPDATE `reservanatural`.`flora` SET `Imagen` = 'imagenes/Flora/palma_asaí.JPG' WHERE (`idflora` = '22');
+UPDATE `reservanatural`.`flora` SET `Imagen` = 'imagenes/Flora/Parkia pendula.JPG' WHERE (`idflora` = '3');
+
+
+
 CREATE TABLE `reservanatural`.`contactenos` (
   `idcontactenos` INT NOT NULL AUTO_INCREMENT,
   `Nombre` VARCHAR(45) NULL,
@@ -157,9 +163,14 @@ CREATE TABLE `reservanatural`.`contactenos` (
   `Correo` VARCHAR(45) NULL,
   PRIMARY KEY (`idcontactenos`));
   
-  INSERT INTO `reservanatural`.`contactenos` (`idcontactenos`, `Nombre`, `Telefono`, `Correo`) VALUES ('1', 'Carlos Taborda', '3136545076', 'carlitos123@gmail.com');
-  INSERT INTO `reservanatural`.`contactenos` (`idcontactenos`, `Nombre`, `Telefono`, `Correo`) VALUES ('2', 'Gloria Zapata', '12315232', 'gloria2352@gmal.com');
-  INSERT INTO `reservanatural`.`contactenos` (`idcontactenos`, `Nombre`, `Telefono`, `Correo`) VALUES ('3', 'Reserva De Utria', '5808266', 'reservanaturaldeutria1@gmail.com');
+ UPDATE `reservanatural`.`contactenos` SET `Nombre` = 'Daniela Zapata', `Telefono` = '5774717', `Correo` = 'danizagu2812@gmail.com' WHERE (`idcontactenos` = '1');
+  UPDATE `reservanatural`.`contactenos` SET `Nombre` = 'Karen Vasquéz', `Telefono` = '5668793', `Correo` = 'karen5808266@gmal.com' WHERE (`idcontactenos` = '2');
+   UPDATE `reservanatural`.`contactenos` SET `Nombre` = 'Heidy Pachón', `Correo` = 'heidypachon8@gmail.com' WHERE (`idcontactenos` = '3');
+
+
+UPDATE `reservanatural`.`contactenos` SET `Telefono`='5995646' WHERE `idcontactenos`='1';
+UPDATE `reservanatural`.`contactenos` SET `Telefono`='5776734' WHERE `idcontactenos`='2';
+UPDATE `reservanatural`.`contactenos` SET `Telefono`='4773716' WHERE `idcontactenos`='3';
 
 
 

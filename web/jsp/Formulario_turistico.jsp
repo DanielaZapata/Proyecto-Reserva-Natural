@@ -194,8 +194,9 @@
         
                 </section>
                 <div class="rs">
-                    <img src="imagenes/facebook.jpg" width="50" alt="50">
-                    <img src="imagenes/instagram.jpg" width="50" alt="50">
+                 <a href="https://www.facebook.com/dani.pachon.509"><img src="imagenes/facebook.jpg" width="50" alt="50"></a>
+                 <a href="https://www.instagram.com/ensenadadeutria/?hl=es-la"><img src="imagenes/instagram.jpg" width="50" alt="50"></a>
+            </div>
                 </section>
             </footer>
 </body>

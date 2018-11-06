@@ -1,14 +1,14 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controladores;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -25,9 +25,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "Comentarios", urlPatterns = {"/Comentarios"})
 public class Comentarios extends HttpServlet {
 
-    private String apelldios;
-    private int tipo;
-
 
     /**
      * Handles the HTTP
@@ -43,8 +40,12 @@ public class Comentarios extends HttpServlet {
             throws ServletException, IOException {
         RequestDispatcher rd = request.getRequestDispatcher("jsp/Comentarios.jsp");
         rd.forward(request, response);
+        
+    
     }
 
+    
+    
     /**
      * Handles the HTTP
      * <code>POST</code> method.
@@ -68,10 +69,19 @@ public class Comentarios extends HttpServlet {
         String barrio = request.getParameter("barrio");
         String telefono = request.getParameter("telefono");
         String celular = request.getParameter("celular");
-        String aceptar_requisitos = request.getParameter("aceptar_requisitos");
-        guardarComentario(nombre, apellidos,email,pais,ciudad,barrio,telefono,celular,aceptar_requisitos);
+        String opinion = request.getParameter("opinion");
+        
+        
+        guardarComentario(nombre, apellidos,email,pais,ciudad,barrio,telefono,celular,opinion);
         
         rd.forward(request, response);
+        
+            List<String> comentarios = new ArrayList<String>();
+            comentarios.add("Nombres");
+            comentarios.add("Apellidos");
+            comentarios.add("Opinion");
+            request.setAttribute("comentarios", Comentarios());
+            rd.forward(request, response);
     }
 
     /**
@@ -79,24 +89,60 @@ public class Comentarios extends HttpServlet {
      *
      * @return a String containing servlet description
      */
+    
     @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 
-    private void guardarComentario(String nombre, String apellidos, String email, String pais, String ciudad, String barrio, String telefono, String celular, String aceptar_requisitos) {
+    private void guardarComentario(String nombre, String apellidos, String email, String pais, String ciudad, String barrio, String telefono, String celular, String Opinion) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `ejemplo`.`imagenes` (`nombre`, `apellidos`, tipo) VALUES (?, ?, ?)");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `reservanatural`.`comentarios` (`Nombres`, `Apellidos`, `Correo`, `Pais`, `Ciudad`, `Barrio`, `Telefono`, `Celular`, `Opinion`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
             ps.setString(1, nombre);
             ps.setString(2, apellidos);
-            ps.setInt(3, tipo);
+            ps.setString(3, email);
+            ps.setString(4, pais);
+            ps.setString(5, ciudad);
+            ps.setString(6, barrio);
+            ps.setString(7, telefono);
+            ps.setString(8, celular);
+            ps.setString(9, Opinion);
             ps.execute();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Comentarios.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(Comentarios.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    List<Comentario> Comentarios(){
+        List<Comentario> listaComentarios = new ArrayList<Comentario> ();
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("SELECT * FROM .comentarios");
+            ResultSet resultados = ps.executeQuery();
+            while (resultados.next()){
+                int idcomentarios = resultados.getInt("idcomentarios");
+                String Nombres = resultados.getString("Nombres");
+                String Apellidos = resultados.getString("Apellidos");
+                String Opinion = resultados.getString("Opinion");
+                Comentario t = new Comentario();
+                t.idcomentarios = idcomentarios;
+                t.Nombres = Nombres;
+                t.Apellidos = Apellidos;
+                t.Opinion = Opinion;
+                
+                listaComentarios.add(t);
+            }
+            conexion.close();
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Comentarios.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Comentarios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listaComentarios;
     }
 }
