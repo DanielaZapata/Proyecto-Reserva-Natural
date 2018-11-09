@@ -20,6 +20,14 @@
         <servlet-name>Nueva_fauna</servlet-name>
         <servlet-class>controladores.Nueva_fauna</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Animales</servlet-name>
+        <servlet-class>modelos.Animales</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NuevaImagen</servlet-name>
+        <servlet-class>modelos.NuevaImagen</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Quienes_somos</servlet-name>
         <url-pattern>/Quienes_somos</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>Nueva_fauna</servlet-name>
         <url-pattern>/Nueva_fauna</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Animales</servlet-name>
+        <url-pattern>/Animales</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NuevaImagen</servlet-name>
+        <url-pattern>/NuevaImagen</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
