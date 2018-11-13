@@ -67,18 +67,7 @@ public class Nueva_fauna extends HttpServlet {
         req.setAttribute("Imagen", imagenes());
         rd.forward(req, resp);
     
-        
-        if(idaveStr != null && !idaveStr.equals("")){
-            int idave = Integer.parseInt(idaveStr);
-            actualizarImagen(idave, nombre, imagen, descripcion, tipo);
-        } else {
-            guardarImagen(nombre, imagen, descripcion, tipo);
-        }
-        
-        List<Imagen> imagenes = imagenes();
-        req.setAttribute("imagenes", imagenes);
-        
-        rd.forward(req, resp);
+
     }
 
 
