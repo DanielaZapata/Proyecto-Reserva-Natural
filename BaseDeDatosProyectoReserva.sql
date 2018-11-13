@@ -1,7 +1,7 @@
 CREATE DATABASE RESERVANATURAL;
 
 CREATE TABLE `reservanatural`.`animal` (
-  `idave` INT NOT NULL AUTO_INCanimalREMENT,
+  `idave` INT NOT NULL AUTO_INCREMENT,
   `Nombre` VARCHAR(45) NULL,
   `Imagen` VARCHAR(200) NULL,
   `Descripcion` VARCHAR(300) NULL,

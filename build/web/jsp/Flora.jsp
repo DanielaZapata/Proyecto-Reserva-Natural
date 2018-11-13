@@ -125,7 +125,9 @@
                 tr {
                     background-color: #dddddd;
                 }
-                
+                img.edit {
+                    width: 60px;
+                }
                
 
         </style>
@@ -180,6 +182,7 @@
                     <br>
                     <td><div><%= imagen.descripcion%></div></td>
                     <br>
+                     <td class="bg-info"><image class="edit" onclick="editarImagen('<%= imagen.nombre%>', '<%= imagen.imagen%>', '<%= imagen.descripcion%>')" src="https://image.flaticon.com/icons/svg/34/34022.svg" /></td>
                     </tr>
                 </div>
             </table>

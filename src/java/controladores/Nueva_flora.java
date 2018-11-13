@@ -6,11 +6,20 @@
 package controladores;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.Imagen;
 
 /**
  *
@@ -18,19 +27,89 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Nueva_flora extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher rd = req.getRequestDispatcher("jsp/Nueva_flora.jsp");
+        rd.forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+     RequestDispatcher rd = req.getRequestDispatcher("jsp/Nueva_flora.jsp");
+        //recibir los datos del formulario
+        String nombre = req.getParameter("nombre");
+        String imagen = req.getParameter("imagen");
+        String descripcion = req.getParameter("descripcion");
+        //llamar a un metodo q guarde
+        guardarImagen(nombre, imagen, descripcion );
+        
+    }
+
+    private void guardarImagen(String nombre, String imagen, String descripcion) {
+       try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO reservanatural.flora (nombre, imagen, descripcion, ) VALUES (?, ?, ?)");
+            ps.setString(1, nombre);
+            ps.setString(2, imagen);
+            ps.setString(3, descripcion);
+            ps.execute();
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Nueva_flora.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Nueva_flora.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+
+    List<Imagen> imagenes() {
+        List<Imagen> listaImagenes = new ArrayList<Imagen>();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("SELECT * FROM flora");
+            ResultSet resultados = ps.executeQuery();
+            while (resultados.next()) {
+                int idflora = resultados.getInt("idflora");
+                String nombre = resultados.getString("nombre");
+                String imagen = resultados.getString("imagen");
+                String descripcion = resultados.getString("descripcion");
+                Imagen i = new Imagen();
+                i.idflora = idflora;
+                i.nombre = nombre;
+                i.imagen = imagen;
+                i.descripcion = descripcion;
+                listaImagenes.add(i);
+            }
+            conexion.close();
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Flora.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Flora.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listaImagenes;
+    }
+
+     private void actualizarImagen(int idflora, String nombre, String imagen, String descripcion) {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO reservanatural.flora (nombre, imagen, descripcion) VALUES (?, ?, ?)");
+            ps.setString(1, nombre);
+            ps.setString(2, imagen);
+            ps.setString(3, descripcion);
+            ps.execute();
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Nueva_flora.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Nueva_flora.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
+
+    
+    
+
+    
+
