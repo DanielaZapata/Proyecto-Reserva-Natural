@@ -22,7 +22,7 @@
             List<Imagen> listaImagenes = (List<Imagen>) request.getAttribute("Imagen");
         %>
         <h1>Formulario para agregar una planta a la flora</h1>
-        <form name="Nueva_fauna" action="Nueva_fauna" method="POST">
+        <form name="Nueva_flora" action="Nueva_flora" method="POST">
             <span>nombre</span><input type="text" name="nombre" />
             <span>imagen</span><input type="text" name="imagen" />
             <span>descripcion</span><input type="text" name="descripcion" />

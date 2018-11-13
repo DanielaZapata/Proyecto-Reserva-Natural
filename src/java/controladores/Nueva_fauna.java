@@ -66,15 +66,29 @@ public class Nueva_fauna extends HttpServlet {
         req.setAttribute("tipos", tipos);
         req.setAttribute("Imagen", imagenes());
         rd.forward(req, resp);
-    }
     
+        
+        if(idaveStr != null && !idaveStr.equals("")){
+            int idave = Integer.parseInt(idaveStr);
+            actualizarImagen(idave, nombre, imagen, descripcion, tipo);
+        } else {
+            guardarImagen(nombre, imagen, descripcion, tipo);
+        }
+        
+        List<Imagen> imagenes = imagenes();
+        req.setAttribute("imagenes", imagenes);
+        
+        rd.forward(req, resp);
+    }
+
+
     
 
     private void guardarImagen(String nombre, String imagen, String descripcion, String tipo) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `reservanatural`.`animal` (`nombre`, `imagen`, 'descripcion', tipo) VALUES (?, ?, ?, ?)");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO animal (nombre, imagen, descripcion, tipo) VALUES (?, ?, ?, ?)");
             ps.setString(1, nombre);
             ps.setString(2, imagen);
             ps.setString(3, descripcion);
@@ -115,7 +129,7 @@ public class Nueva_fauna extends HttpServlet {
         List<Imagen> listaImagenes = new ArrayList<Imagen>();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
             PreparedStatement ps = conexion.prepareStatement("SELECT * FROM animal");
             ResultSet resultados = ps.executeQuery();
             while (resultados.next()) {
@@ -143,8 +157,8 @@ public class Nueva_fauna extends HttpServlet {
     private void actualizarImagen(int idave, String nombre, String imagen, String descripcion, String tipo) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemplo", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `reservanatural`.`animal` (`nombre`, `imagen`, 'descripcion', tipo) VALUES (?, ?, ?, ?)");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO animal (nombre, imagen, descripcion, tipo) VALUES (?, ?, ?, ?)");
             ps.setString(1, nombre);
             ps.setString(2, imagen);
             ps.setString(3, descripcion);

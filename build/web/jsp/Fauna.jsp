@@ -125,6 +125,9 @@
                 tr {
                     background-color: #dddddd;
                 }
+                img.edit {
+                    width: 60px;
+                }
                
 
         </style>
@@ -187,6 +190,8 @@
                     <br>
                     <td><div><%= imagen.descripcion%></div></td>
                     <br>
+                    <td class="bg-info"><image class="edit" onclick="editarImagen('<%= imagen.nombre%>', '<%= imagen.imagen%>', '<%= imagen.descripcion%>')" src="https://image.flaticon.com/icons/svg/34/34022.svg" /></td>
+                        
                     </tr>
                 </div>
             </table>
@@ -215,6 +220,7 @@
                     <br>
                     <td><div><%= imagen.descripcion%></div></td>
                     <br>
+                     <td class="bg-info"><image class="edit" onclick="editarImagen('<%= imagen.nombre%>', '<%= imagen.imagen%>', '<%= imagen.descripcion%>')" src="https://image.flaticon.com/icons/svg/34/34022.svg" /></td>
                     </tr>
                 </div>
             </table>
@@ -243,6 +249,7 @@
                     <br>
                     <td><div><%= imagen.descripcion%></div></td>
                     <br>
+                     <td class="bg-info"><image class="edit" onclick="editarImagen('<%= imagen.nombre%>', '<%= imagen.imagen%>', '<%= imagen.descripcion%>')" src="https://image.flaticon.com/icons/svg/34/34022.svg" /></td>
                     </tr>
                 </div>
             </table>
@@ -271,6 +278,7 @@
                     <br>
                     <td><div><%= imagen.descripcion%></div></td>
                     <br>
+                    <td class="bg-info"><image class="edit" onclick="editarImagen('<%= imagen.nombre%>', '<%= imagen.imagen%>', '<%= imagen.descripcion%>')" src="https://image.flaticon.com/icons/svg/34/34022.svg" /></td>
                     </tr>
                 </div>
             </table>
@@ -278,7 +286,7 @@
             }%>
         </div>
          <br>
-         <h2>Serpientes</h2>
+         <h2>Serpientes y reptiles</h2>
         <hr>
         
         <div class="contenedor">
@@ -298,6 +306,7 @@
                     <br>
                     <td><div><%= imagen.descripcion%></div></td>
                     <br>
+                    <td class="bg-info"><image class="edit" onclick="editarImagen('<%= imagen.nombre%>', '<%= imagen.imagen%>', '<%= imagen.descripcion%>')" src="https://image.flaticon.com/icons/svg/34/34022.svg" /></td>
                     </tr>
                 </div>
             </table>
@@ -325,9 +334,26 @@
                     <br>
                     <td><div><%= imagen.descripcion%></div></td>
                     <br>
+                    <td class="bg-info"><image class="edit" onclick="editarImagen('<%= imagen.nombre%>', '<%= imagen.imagen%>', '<%= imagen.descripcion%>')" src="https://image.flaticon.com/icons/svg/34/34022.svg" /></td>
                     </tr>
                 </div>
             </table>
+            <script>
+                    function editarImagen(id, nombre, imagen, descripcion, tipo) {
+                //alert(id + " " + nombre + " " + ruta);
+                var inputId = document.getElementById("idimagenes");
+                var inputNombre = document.getElementById("nombre");
+                var inputImagen = document.getElementById("imagen");
+                var inputDescripcion = document.getElementById("descripcion");
+                var inputTipo = document.getElementById("tipo");
+
+                inputId.value = id;
+                inputNombre.value = nombre;
+                inputImagen.value = imagen;
+                inputDescripcion.value = descripcion;
+                inputTipo.value = tipo;
+            }
+            </script>
             <%
             }%>
         </div>

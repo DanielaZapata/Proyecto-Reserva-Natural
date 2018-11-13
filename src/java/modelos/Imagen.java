@@ -13,4 +13,5 @@ public class Imagen {
     public String imagen;
     public String descripcion;
     public int idave;
+    public int idflora;
 }
