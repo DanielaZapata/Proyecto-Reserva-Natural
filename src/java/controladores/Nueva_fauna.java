@@ -48,12 +48,19 @@ public class Nueva_fauna extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher rd = req.getRequestDispatcher("jsp/Nueva_fauna.jsp");
         //recibir los datos del formulario
+        String id = req.getParameter("idave");
         String nombre = req.getParameter("nombre");
         String imagen = req.getParameter("imagen");
         String descripcion = req.getParameter("descripcion");
         String tipo = req.getParameter("tipo");
-        //llamar a un metodo q guarde
-        guardarImagen(nombre, imagen, descripcion, tipo);
+        if(id != null && id.equals("")) {
+            //llamar a un metodo q guarde
+            guardarImagen(nombre, imagen, descripcion, tipo);
+        } else {
+            System.out.println("el id es: " +  id);
+            int idave = Integer.parseInt(id);
+            actualizarImagen(idave, nombre, imagen, descripcion, tipo);
+        }
        
         List<String> tipos = new ArrayList<String>();
         tipos.add("Ave");
@@ -157,4 +164,6 @@ public class Nueva_fauna extends HttpServlet {
             Logger.getLogger(Nueva_fauna.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+   
 }
