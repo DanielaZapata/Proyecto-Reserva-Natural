@@ -54,8 +54,7 @@ public class Nueva_fauna extends HttpServlet {
         String tipo = req.getParameter("tipo");
         //llamar a un metodo q guarde
         guardarImagen(nombre, imagen, descripcion, tipo);
-        
-        
+       
         List<String> tipos = new ArrayList<String>();
         tipos.add("Ave");
         tipos.add("mamifero");
@@ -66,8 +65,6 @@ public class Nueva_fauna extends HttpServlet {
         req.setAttribute("tipos", tipos);
         req.setAttribute("Imagen", imagenes());
         rd.forward(req, resp);
-    
-
     }
 
 
@@ -147,11 +144,12 @@ public class Nueva_fauna extends HttpServlet {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservanatural", "root", "");
-            PreparedStatement ps = conexion.prepareStatement("INSERT INTO animal (nombre, imagen, descripcion, tipo) VALUES (?, ?, ?, ?)");
+            PreparedStatement ps = conexion.prepareStatement("UPDATE `reservanatural`.`animal` SET `Nombre`=?, `Imagen`=?, `Descripcion`=? `idave`=? WHERE `idave`=?;");
             ps.setString(1, nombre);
             ps.setString(2, imagen);
             ps.setString(3, descripcion);
             ps.setString(4, tipo);
+            ps.setInt(5, idave);
             ps.execute();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Nueva_fauna.class.getName()).log(Level.SEVERE, null, ex);

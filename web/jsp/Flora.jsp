@@ -14,6 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="imagenes/img7.png" />
          <link rel="stylesheet" href="bootstrap.min.css" 
+        <link rel="stylesheet" href="bootstrap.min.css" 
               integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" 
               crossorigin="anonymous"/>
 
@@ -154,7 +155,7 @@
             </nav>
             
         </header>
-
+           <br>
     <center>
         <h1>Flora</h1>
     </center>
@@ -185,8 +186,7 @@
                     <br>
                     <td><div><%= imagen.descripcion%></div></td>
                     <br>
-                     <td class="bg-info"><image class="edit" onclick="editarImagen('<%= imagen.nombre%>', '<%= imagen.imagen%>', '<%= imagen.descripcion%>')" src="https://image.flaticon.com/icons/svg/34/34022.svg" /></td>
-                    </tr>
+                     </tr>
                 </div>
             </table>
             <%

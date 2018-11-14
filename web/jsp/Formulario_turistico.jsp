@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css" 
+   <script src="main.js"></script>
+   <link rel="stylesheet" href="bootstrap.min.css" 
               integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" 
               crossorigin="anonymous"/>
 

@@ -17,7 +17,10 @@
          <link rel="stylesheet" href="bootstrap.min.css" 
               integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" 
               crossorigin="anonymous"/>
-
+       <link rel="stylesheet" href="bootstrap.min.css" 
+              integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" 
+              crossorigin="anonymous"/>
+        <link rel="stylesheet" href="estilosd.css">
     </head>
 
     <style>

@@ -12,8 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nueva Fauna</title>
         <link rel="shortcut icon" href="imagenes/img7.png" />
-         <link rel="stylesheet" href="bootstrap.min.css" 
-              integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" 
+        <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" 
               crossorigin="anonymous"/>
     </head>
     <body>

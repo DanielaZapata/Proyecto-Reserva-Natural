@@ -12,10 +12,10 @@
     <head>
         <title>¿Quiénes somos?</title>
         <link rel="shortcut icon" href="imagenes/img7.png" />
-         <link rel="stylesheet" href="bootstrap.min.css" 
+        <link rel="stylesheet" href="bootstrap.min.css" 
               integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" 
               crossorigin="anonymous"/>
-         <style>
+        <style>
            header {
             background:#2c3e50;
             width:100%;

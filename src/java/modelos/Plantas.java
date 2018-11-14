@@ -6,8 +6,8 @@
 package modelos;
 
 public class Plantas {
-   
-     public int id;
+
+    public int id;
     public String nombre;
 
 }
