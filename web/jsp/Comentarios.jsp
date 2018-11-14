@@ -193,6 +193,7 @@
                 <th>nombre</th>
                 <th>apellido</th>
                 <th>opinion</th>
+                <th>editar</th>
             </tr>
             </thead>
             <br>
@@ -204,6 +205,13 @@
                         <td><%= i.Nombres%></td>
                         <td><%= i.Apellidos%></td>
                         <td><%= i.Opinion%></td>
+                         <td>
+                    <button 
+                        type="button" 
+                        onclick="editarcomentario('<%= i.idflora%>','<%= i.Nombres%>','<%= i.Apellidos%>','<%= i.Opinion%>')">
+                        click para editar
+                    </button>
+                </td>
                     </tr>
                     <%
                     }%>             
