@@ -1,11 +1,7 @@
-<%-- 
-    Document   : Comentarios 
-    Created on : 1/09/2018, 10:43:18 PM
-    Author     : User
---%>
 
 <%@page import="modelos.Contacto"%>
-<%@page import="controladores.Comentarios"%>
+<%@page import="java.util.List"%>
+<%@page import="modelos.Comentario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
@@ -199,18 +195,19 @@
                 <th>opinion</th>
             </tr>
             </thead>
+            <br>
             <tbody>
                 <%
-                    for (Contacto i : listaComentarios) {%>
+                    List<Comentario> listaComentarios = (List<Comentario>) request.getAttribute("comentarios");
+                    for (Comentario i : listaComentarios) {%>
                     <tr>
-                        <td><= i.Nombres%></td>
-                        <td><= i.Apellidos%></td>
-                        <td><= i.Opinion%></td>
+                        <td><%= i.Nombres%></td>
+                        <td><%= i.Apellidos%></td>
+                        <td><%= i.Opinion%></td>
                     </tr>
-                   
-                        
+                    <%
+                    }%>             
             </tbody>
-            
         </table>
         <footer>
             <section class="links">

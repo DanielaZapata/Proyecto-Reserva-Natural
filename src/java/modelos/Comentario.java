@@ -9,4 +9,5 @@ public class Comentario {
     public String Nombres;
     public String Apellidos;
     public String Opinion;
+    public int idcomentarios;
 }

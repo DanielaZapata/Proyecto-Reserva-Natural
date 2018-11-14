@@ -13,6 +13,9 @@
         <title>Flora</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="imagenes/img7.png" />
+         <link rel="stylesheet" href="bootstrap.min.css" 
+              integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" 
+              crossorigin="anonymous"/>
 
         <style>
             header {
