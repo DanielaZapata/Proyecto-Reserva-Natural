@@ -101,7 +101,7 @@ public class Nueva_fauna extends HttpServlet {
                 int id = resultados.getInt("id");
                 String nombre = resultados.getString("nombre");
                 Animal t = new Animal();
-                t.id = id;
+                t.id = id; 
                 t.nombre = nombre;
                 listaAnimales.add(t);
             }
